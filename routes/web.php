@@ -20,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'index']);
 Route::get('/redirects',[HomeController::class,'redirects']);
 //Admin
+//User
 Route::get('/user',[UserController::class,'index']);
+Route::get('/delete-user/{id}',[UserController::class,'destroy']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

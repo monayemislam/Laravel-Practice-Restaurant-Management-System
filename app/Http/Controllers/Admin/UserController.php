@@ -85,6 +85,11 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(User::where('id',$id)->exists())
+        {
+            $book = User::where('id',$id)->first();
+            $book->delete();
+            return redirect('/user')->with('status', 'User Deleted Successfully!');
+        }
     }
 }
