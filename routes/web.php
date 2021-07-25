@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\FoodController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,13 @@ Route::get('/redirects',[HomeController::class,'redirects']);
 //User
 Route::get('/user',[UserController::class,'index']);
 Route::get('/delete-user/{id}',[UserController::class,'destroy']);
+//view Food Menu
+Route::get('/food-menu',[FoodController::class,'index']);
+//Create Food Menu
+Route::get('/create-food',[FoodController::class,'create']);
+//store food menu
+Route::post('/save-food',[FoodController::class,'store']);
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

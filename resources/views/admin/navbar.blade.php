@@ -17,7 +17,7 @@
           </li>
 
           <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
+            <a class="nav-link" href="{{url('/create-food')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-food"></i>
               </span>
