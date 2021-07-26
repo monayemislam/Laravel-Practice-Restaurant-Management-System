@@ -16,7 +16,6 @@ class UserController extends Controller
      */
     public function index()
     {   
-        // $data = DB::select('select * from users');
         $data = User::all()->where('user_type','0');
         
         return view('admin.users',compact('data'));

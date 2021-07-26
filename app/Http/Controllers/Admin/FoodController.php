@@ -15,7 +15,7 @@ class FoodController extends Controller
      */
     public function index()
     {
-        echo "I am food controller index method";
+        
     }
 
     /**
